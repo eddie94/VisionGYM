@@ -1,0 +1,3 @@
+dataset:
+  type: classification
+  root: "path to dataset"
