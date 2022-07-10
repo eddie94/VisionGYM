@@ -1,8 +1,8 @@
 from glob import glob
-from torch.utils.data import dataset
+from torch.utils.data.dataset import Dataset
 
 
-class ImageClassificationDataset(dataset):
+class ImageClassificationDataset(Dataset):
     def __init__(self, root, tf_input, tf_gt):
         super(ImageClassificationDataset, self).__init__()
 
