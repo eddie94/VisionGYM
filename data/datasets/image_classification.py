@@ -3,7 +3,7 @@ from torch.utils.data import dataset
 
 
 class ImageClassificationDataset(dataset):
-    def __init__(self, root, transforms):
+    def __init__(self, root, tf_input, tf_gt):
         super(ImageClassificationDataset, self).__init__()
 
     def __len__(self):

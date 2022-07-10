@@ -1,3 +1,8 @@
+main:
+  task: "name of task"
+
 dataset:
-  type: classification
   root: "path to dataset"
+  transforms:
+    input: "name of transforms for input data"
+    gt: "name of transforms for ground truth"
