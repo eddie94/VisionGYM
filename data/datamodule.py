@@ -22,17 +22,20 @@ class DataModule(LightningDataModule):
     def train_dataloader(self) -> DataLoader:
         return DataLoader(
             self.trainset,
-            batch_size=self.config.dataset.train.batch_size
+            batch_size=self.config.dataset.train.batch_size,
+            shuffle=True
         )
 
     def val_dataloader(self) -> DataLoader:
         return DataLoader(
             self.valset,
-            batch_size=self.config.dataset.val.batch_size
+            batch_size=self.config.dataset.val.batch_size,
+            shuffle=True
         )
 
     def test_dataloader(self) -> DataLoader:
         return DataLoader(
             self.testset,
-            batch_size=self.config.dataset.test.batch_size
+            batch_size=self.config.dataset.test.batch_size,
+            shuffle=False
         )
