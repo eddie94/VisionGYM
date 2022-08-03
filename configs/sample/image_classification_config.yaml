@@ -39,3 +39,6 @@ model:
     type: VGGClassifier
     params:
       num_classes: 10
+
+loss:
+  type: CrossEntropyLoss
