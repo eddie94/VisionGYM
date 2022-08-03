@@ -17,8 +17,10 @@ class VGGBase(nn.Module):
 
         if config.type in self.cfgs.keys():
             cfgs = self.cfgs[config.type]
-        else:
+        elif config.type == "CustomVGG":
             cfgs = config.cfgs
+        else:
+            raise ValueError("Undefined VGG model type")
 
         self.convs = make_layers(vgg.VggBackbone, cfgs)
         self.fc = getattr(vgg, config.classifier.type)(**config.classifier.params)
