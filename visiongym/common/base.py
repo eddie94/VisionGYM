@@ -14,6 +14,10 @@ class Backbone(nn.Module, metaclass=ABCMeta):
     def forward(self):
         pass
     
+    @abstractmethod
+    def build_module(self):
+        pass
+    
     @staticmethod
     def build_conv2d_layer(deformable):
         # deformable conv settings
